@@ -1,0 +1,45 @@
+@use "color" as color;
+@use "mixins" as mixin;
+
+.section--three {
+    margin-bottom: 40px;
+    .container-fluid {
+        h2 {
+            color: color.$dark-blue;
+            text-align: center;
+            font-size: mixin.to-rem(33);
+            font-weight: 700;
+            margin: 0 0 50px 0;
+        }
+
+        #feedback {
+            margin-bottom: 50px;
+            .feedback--card--container {
+                position: relative;
+
+                .customer--img {
+                    position: absolute;
+                    top: -43px;
+                    width: 80px;
+                }
+
+                .feedback--card {
+                    // background-color: color.$dark-grayish-blue;
+                    padding: 62px 24px 44px 24px;
+                    text-align: center;
+                    background-color: color.$light-grey;
+                    border-radius: 5px;
+                    
+                    .customer--name{
+                        font-weight: 700;
+                    }
+                    .customer--feedback{
+                        margin-top: 20px;
+                        color: color.$dark-grayish-blue;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

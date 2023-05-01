@@ -1,0 +1,47 @@
+
+@use "color" as color;
+@use "mixins" as mixin;
+.section--five{
+    padding: 50px 24px;
+    background-color: color.$dark-blue;
+    .section--form{
+        margin-bottom: 60px;
+        input{
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: mixin.to-rem(14);
+            margin-right: 5px;
+        }
+    }
+
+    .section--links{
+        margin-bottom: 40px;
+        ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            li{
+                text-align: left;
+                color: color.$dark-grayish-blue;
+                &:not(:last-child){
+
+                    margin: 0 0 15px 0;
+                }
+            }
+        }
+    }
+
+    .section--social{
+        .social--links{
+            img{
+                width: 40px;
+            }
+            margin: 0 0 50px  0;
+        }
+    }
+
+    .copywrite{
+        color: color.$dark-grayish-blue;
+        font-size: 11px;
+    }
+}

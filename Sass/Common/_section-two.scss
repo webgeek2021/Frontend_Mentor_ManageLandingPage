@@ -1,0 +1,49 @@
+
+@use "mixins" as mixin;
+@use "color" as color;
+.section--two{
+    margin-bottom: 80px;
+    .container-left{
+        margin-bottom: 55px;
+        text-align: center;
+        .container-fluid{
+            h2{
+                font-size: mixin.to-rem(32);
+                font-weight: 700;
+            }
+            p{
+                color: color.$dark-grayish-blue;
+                font-size: mixin.to-rem(15);
+                font-weight: 500;
+            }
+        }
+    }
+    .container-right{
+        .feature--card{
+            &:not(:last-child){
+                margin-bottom: 50px;
+            }
+            padding-left: 15px;
+            .feature--card--header{
+                margin-bottom: 15px;
+                border-radius: 50px 0 0 50px;
+                background-color: color.$light-red;
+                span{
+                    margin-right: 12px;
+                    padding: 10px 21px;
+                }
+                p{
+                    font-weight: 700;
+                    color: color.$very-dark-blue;
+                }
+            }
+            .feature--card--body{
+                text-align: left;
+                color: color.$dark-grayish-blue;
+                padding-right: 22px;
+                font-size: mixin.to-rem(16);
+                line-height: 25px;
+            }
+        }
+    }
+}

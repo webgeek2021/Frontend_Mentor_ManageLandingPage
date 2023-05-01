@@ -1,0 +1,17 @@
+
+@use "color" as color;
+@use "mixins" as mixin;
+
+.section--four{
+    background-color: color.$bright-red;
+    padding: 44px;
+    text-align: center;
+    h2{
+        font-size: mixin.to-rem(35);
+        color: color.$very-light-gray;
+        margin-bottom: 22px;
+    }
+    button{
+        font-weight: 700;
+    }
+}

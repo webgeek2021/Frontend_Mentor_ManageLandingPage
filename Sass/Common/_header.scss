@@ -1,0 +1,33 @@
+
+@use "color" as color;
+.header--container {
+    margin-top: 20px;
+    .header--nav{
+        .container-fluid{
+            .primary-btn{
+                display: none;
+            }
+            .nav--open{
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.4);
+                box-shadow: 147px 347px 61px 185px red ;
+                opacity: 0.8;
+            }
+            .navbar-collapse{
+                .navbar-nav{
+                    margin-top: 20px;
+                    border-radius: 5px;
+                    text-align: center;
+                    padding: 20px;
+
+                    .nav-item{
+                        font-weight: 700;
+                        &:not(:last-child){
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

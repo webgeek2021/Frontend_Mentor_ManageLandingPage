@@ -1,0 +1,31 @@
+@use "mixins" as mixin;
+@use "color" as color;
+
+.section--one {
+    margin-bottom: 100px;
+    // background: url("../../images/bg-tablet-pattern.svg") no-repeat;
+
+    
+
+    .container-fluid {
+        .intro--img {
+            object-fit: cover;
+            width: 100%;
+            margin-top: 35px;
+        }
+
+        .intro--info {
+            text-align: center;
+            .intro--title {
+                text-transform: capitalize;
+                font-size: 2rem;
+                font-weight: 700;
+                color: color.$dark-blue;
+            }
+            p{
+                color: color.$dark-grayish-blue;
+                margin-bottom: 26px;
+            }
+        }
+    }
+}

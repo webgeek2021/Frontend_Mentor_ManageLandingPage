@@ -1,0 +1,42 @@
+@use "color" as color;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: url("../../images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 406px;
+    background-position: 41px -41px;
+
+}
+.primary-btn , .secondary-btn{
+    padding: 10px 30px;
+    color: color.$very-light-gray;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-weight: 500;
+}
+p{
+    margin: 0px;
+}
+.backdrop{
+    background-color: lightblue;
+}
+.primary-btn{
+    background-color: color.$bright-red;
+}
+.secondary-btn{
+    background-color: color.$very-light-gray;
+    color: color.$bright-red;
+}
+
+.container-fluid{
+    padding: 0px 28px !important;
+}
