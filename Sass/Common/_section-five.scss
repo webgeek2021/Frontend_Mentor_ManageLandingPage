@@ -1,47 +1,106 @@
-
 @use "color" as color;
 @use "mixins" as mixin;
-.section--five{
+@use "variables" as var;
+
+.section--five {
     padding: 50px 24px;
     background-color: color.$dark-blue;
-    .section--form{
-        margin-bottom: 60px;
-        input{
-            padding: 10px 30px;
-            border-radius: 50px;
-            font-size: mixin.to-rem(14);
-            margin-right: 5px;
-        }
-    }
 
-    .section--links{
-        margin-bottom: 40px;
-        ul{
-            padding: 0px;
-            margin: 0px;
-            list-style: none;
-            li{
-                text-align: left;
-                color: color.$dark-grayish-blue;
-                &:not(:last-child){
+    .section--five--container {
+        .section--form {
+            margin-bottom: 60px;
 
-                    margin: 0 0 15px 0;
+            input {
+                padding: 10px 30px;
+                border-radius: 50px;
+                font-size: mixin.to-rem(14);
+                margin-right: 5px;
+                border: none;
+
+                &:focus-visible {
+                    outline: none;
                 }
             }
         }
-    }
 
-    .section--social{
-        .social--links{
-            img{
-                width: 40px;
+        .section--links {
+            margin-bottom: 40px;
+
+            ul {
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+
+                li {
+                    text-align: left;
+                    color: color.$dark-grayish-blue;
+
+                    &:not(:last-child) {
+
+                        margin: 0 0 15px 0;
+                    }
+                }
             }
-            margin: 0 0 50px  0;
+        }
+
+        .section--social {
+            margin: 0 0 50px 0;
+
+            .social--links {
+                img {
+                    width: 40px;
+                }
+
+                margin: 0 0 50px 0;
+            }
+
+            h2 {
+                color: color.$very-light-gray;
+                font-size: mixin.to-rem(45);
+            }
+        }
+
+        .copywrite {
+            color: color.$dark-grayish-blue;
+            font-size: 11px;
         }
     }
+}
 
-    .copywrite{
-        color: color.$dark-grayish-blue;
-        font-size: 11px;
+@media screen and (min-width : var.$DESKTOP_DEVICE) {
+    .section--five {
+        position: relative;
+
+        .section--five--container {
+            max-width: 1110px;
+            margin: 0 auto;
+
+            .section--links {
+                .social-left {
+                    margin: 0 103px 0 0;
+                }
+
+                
+            }
+
+            .section--social {
+                position: relative;
+                margin: 0px;
+
+                .social--links {
+                    position: absolute;
+                    bottom: -150px;
+                    img {
+                        width: 24px;
+                    }
+                }
+            }
+
+            .copywrite {
+                position: absolute;
+                bottom: 50px;
+            }
+        }
+
     }
 }

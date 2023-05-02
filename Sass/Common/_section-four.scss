@@ -1,17 +1,36 @@
-
 @use "color" as color;
 @use "mixins" as mixin;
+@use "variables" as var;
 
-.section--four{
+.section--four {
     background-color: color.$bright-red;
     padding: 44px;
     text-align: center;
-    h2{
-        font-size: mixin.to-rem(35);
-        color: color.$very-light-gray;
-        margin-bottom: 22px;
+
+    .section--four--container {
+        h2 {
+            font-size: mixin.to-rem(35);
+            color: color.$very-light-gray;
+            margin-bottom: 22px;
+        }
+
+        button {
+            font-weight: 700;
+        }
     }
-    button{
-        font-weight: 700;
+}
+
+@media screen and (min-width:var.$DESKTOP_DEVICE) {
+    .section--four {
+        .section--four--container {
+            margin: 0 auto;
+            max-width: 1110px;
+
+            h2 {
+                width: 46%;
+                text-align: left;
+                margin: 0;
+            }
+        }
     }
 }

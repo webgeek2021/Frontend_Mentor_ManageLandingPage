@@ -1,9 +1,10 @@
 
 @use "color" as color;
+@use "variables" as var;
 .header--container {
     margin-top: 20px;
     .header--nav{
-        .container-fluid{
+        .container{
             .primary-btn{
                 display: none;
             }
@@ -22,8 +23,33 @@
 
                     .nav-item{
                         font-weight: 700;
+                        color: color.$very-dark-blue;
                         &:not(:last-child){
                             margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media  (min-width : var.$DESKTOP_DEVICE) {
+    .header--container{
+        .header--nav{
+            .container{
+                .primary-btn{
+                    display: block;
+                }
+                .navbar-collapse{
+                    .navbar-nav{
+                        margin: 10px auto 0px auto;
+                        .nav-item{
+                            color: color.$dark-grayish-blue;
+                            &:not(:last-child){
+                                margin-right: 32px;
+                            }
                         }
                     }
                 }

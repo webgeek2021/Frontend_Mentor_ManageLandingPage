@@ -17,7 +17,7 @@
 
     <header class="header--container">
         <nav class="navbar navbar-expand-lg  header--nav">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="./images/logo.svg" alt="company logo" />
                 </a>
@@ -27,9 +27,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Pricing</a>
+                            <a class="nav-link" aria-current="page" href="#">Pricing</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Product</a>
@@ -42,35 +42,36 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link disabled">Community</a>
+                            <a class="nav-link">Community</a>
                         </li>
                     </ul>
                 </div>
-                <button class="primary-btn">Get Started</button>
+                <button class="primary-btn primary-btn-shadow">Get Started</button>
             </div>
         </nav>
         </div>
     </header>
 
     <section class="section--one">
-        <div class=" d-md-flex flex-row-reverse align-items-center justify-content-between container-fluid">
+        <div class="d-md-flex flex-row-reverse align-items-center justify-content-between container">
             <img src="./images/illustration-intro.svg" class="intro--img" />
             <div class="intro--info">
                 <h1 class="intro--title">Bring Everyone together to build better products</h1>
                 <p>Manage make it simple for software teams to plan day-by-day task while keeping the larger team goals
                     in view</p>
-                <button class="primary-btn">Get Started</button>
+                <button class="primary-btn primary-btn-shadow">Get Started</button>
             </div>
         </div>
     </section>
 
-    <section class="section--two">
+    <section class="d-md-flex align-items-flex-start justify-content-between section--two">
         <div class="container-left">
-            <div class="container-fluid">
+            <div class="container">
                 <h2>What's different about Manage ?</h2>
                 <p>Manage Provide all the functionality your team needs without the complexity. Our software is
                     tailor-made for modern digital product team</p>
             </div>
+            <img src="./images/bg-tablet-pattern.svg"/>
         </div>
 
         <div class="container-right">
@@ -114,10 +115,36 @@
     </section>
 
     <section class="section--three">
-        <div class="container-fluid text-center">
+        
+        <div class="text-center">
             <h2>What they've said</h2>
 
-            <div id="feedback">
+            <div class="d-flex flex-column flex-md-row" id="feedback">
+
+                <div class="d-flex flex-column align-items-center feedback--card--container">
+                    <img src="./images/avatar-ali.png" class="customer--img" />
+                    <div class="feedback--card">
+                        <span class="customer--name">Ali Bravo</span>
+                        <p class="customer--feedback">
+                            " We have been able to cancel so many other subscriptions since using Manage. There is so
+                            many
+                            cross-channel confusion and everyone is much more focused. "
+                        </p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-center feedback--card--container">
+                    <img src="./images/avatar-ali.png" class="customer--img" />
+                    <div class="feedback--card">
+                        <span class="customer--name">Ali Bravo</span>
+                        <p class="customer--feedback">
+                            " We have been able to cancel so many other subscriptions since using Manage. There is so
+                            many
+                            cross-channel confusion and everyone is much more focused. "
+                        </p>
+                    </div>
+                </div>
+
                 <div class="d-flex flex-column align-items-center feedback--card--container">
                     <img src="./images/avatar-ali.png" class="customer--img" />
                     <div class="feedback--card">
@@ -132,44 +159,49 @@
 
             </div>
 
-            <button class="primary-btn ">Get Started</button>
+            <button class="primary-btn primary-btn-shadow">Get Started</button>
         </div>
     </section>
 
     <section class="section--four">
-        <h2>Simplify how your team works today</h2>
-        <button class="secondary-btn">Get Started</button>
+        <div class="d-md-flex justify-content-between align-items-center section--four--container">
+            <h2>Simplify how your team works today</h2>
+            <button class="secondary-btn">Get Started</button>
+        </div>
     </section>
 
-    <section class="section--five text-center">
-        <div class="d-flex align-items-center section--form">
-            <input type="text" placeholder="Updates in your inbox.."/>
-            <button class="primary-btn">Go</button>
-        </div>
-        <div class="d-flex align-items-flex-start justify-content-around section--links">
-            <ul class="social-left"> 
-                <li>Home</li>
-                <li>Pricing</li>
-                <li>Products</li>
-                <li>About Us</li>
-            </ul>
-
-            <ul class="social-right"> 
-                <li>Careers</li>
-                <li>Community</li>
-                <li>Privacy Policy</li>
-            </ul>
-        </div>
-        <div class="section--social">
-            <div class="d-flex justify-content-around w-100 social--links">
-                <img src="./images/icon-facebook.svg" alt="facebook logo"/>
-                <img src="./images/icon-youtube.svg" alt="youtube logo"/>
-                <img src="./images/icon-twitter.svg" alt="twitter logo"/>
-                <img src="./images/icon-pinterest.svg" alt="pinterest logo"/>
-                <img src="./images/icon-instagram.svg" alt="instagram logo"/>
+    <section class=" section--five text-center">
+        <div class="d-md-flex align-items-center align-items-lg-start justify-content-between section--five--container">
+            <div class="d-flex align-items-center section--form">
+                <input type="text" placeholder="Updates in your inbox.." />
+                <button class="primary-btn">Go</button>
             </div>
+            <div class="d-flex align-items-flex-start justify-content-around section--links">
+                <ul class="social-left">
+                    <li>Home</li>
+                    <li>Pricing</li>
+                    <li>Products</li>
+                    <li>About Us</li>
+                </ul>
+
+                <ul class="social-right">
+                    <li>Careers</li>
+                    <li>Community</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="d-flex  flex-column flex-md-column-reverse align-items-center section--social">
+                <div class="d-flex justify-content-around w-100 social--links">
+                    <img src="./images/icon-facebook.svg" alt="facebook logo" />
+                    <img src="./images/icon-youtube.svg" alt="youtube logo" />
+                    <img src="./images/icon-twitter.svg" alt="twitter logo" />
+                    <img src="./images/icon-pinterest.svg" alt="pinterest logo" />
+                    <img src="./images/icon-instagram.svg" alt="instagram logo" />
+                </div>
+                <h2 >manage</h2>
+            </div>
+            <p class="copywrite">Copyright 2020. All Rights Reserved</p>
         </div>
-        <p class="copywrite">Copyright 2020. All Rights Reserved</p>
     </section>
 
 

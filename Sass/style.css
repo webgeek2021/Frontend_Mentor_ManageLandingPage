@@ -104,63 +104,106 @@ p {
   background-color: hsl(12, 88%, 59%);
 }
 
+.primary-btn-shadow {
+  box-shadow: 0 7px 30px -9px hsl(12, 88%, 59%);
+}
+
 .secondary-btn {
   background-color: hsl(0, 0%, 98%);
   color: hsl(12, 88%, 59%);
 }
 
-.container-fluid {
-  padding: 0px 28px !important;
+.container {
+  padding: 0px 1.75rem !important;
 }
 
+@media (min-width: 992px) {
+  body {
+    background-size: 728px;
+    background-position: 110% -125px;
+  }
+  .container {
+    max-width: 1110px;
+  }
+}
 .header--container {
   margin-top: 20px;
 }
-.header--container .header--nav .container-fluid .primary-btn {
+.header--container .header--nav .container .primary-btn {
   display: none;
 }
-.header--container .header--nav .container-fluid .nav--open {
+.header--container .header--nav .container .nav--open {
   position: relative;
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 147px 347px 61px 185px red;
   opacity: 0.8;
 }
-.header--container .header--nav .container-fluid .navbar-collapse .navbar-nav {
+.header--container .header--nav .container .navbar-collapse .navbar-nav {
   margin-top: 20px;
   border-radius: 5px;
   text-align: center;
   padding: 20px;
 }
-.header--container .header--nav .container-fluid .navbar-collapse .navbar-nav .nav-item {
+.header--container .header--nav .container .navbar-collapse .navbar-nav .nav-item {
   font-weight: 700;
+  color: hsl(233, 12%, 13%);
 }
-.header--container .header--nav .container-fluid .navbar-collapse .navbar-nav .nav-item:not(:last-child) {
+.header--container .header--nav .container .navbar-collapse .navbar-nav .nav-item:not(:last-child) {
   margin-bottom: 12px;
 }
 
+@media (min-width: 992px) {
+  .header--container .header--nav .container .primary-btn {
+    display: block;
+  }
+  .header--container .header--nav .container .navbar-collapse .navbar-nav {
+    margin: 10px auto 0px auto;
+  }
+  .header--container .header--nav .container .navbar-collapse .navbar-nav .nav-item {
+    color: hsl(227, 12%, 61%);
+  }
+  .header--container .header--nav .container .navbar-collapse .navbar-nav .nav-item:not(:last-child) {
+    margin-right: 32px;
+  }
+}
 .section--one {
   margin-bottom: 100px;
 }
-.section--one .container-fluid .intro--img {
+.section--one .container .intro--img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   margin-top: 35px;
 }
-.section--one .container-fluid .intro--info {
+.section--one .container .intro--info {
   text-align: center;
 }
-.section--one .container-fluid .intro--info .intro--title {
+.section--one .container .intro--info .intro--title {
   text-transform: capitalize;
   font-size: 2rem;
   font-weight: 700;
   color: hsl(228, 39%, 23%);
 }
-.section--one .container-fluid .intro--info p {
+.section--one .container .intro--info p {
   color: hsl(227, 12%, 61%);
   margin-bottom: 26px;
 }
 
+@media screen and (min-width: 992px) {
+  .section--one .container .intro--img {
+    width: 50%;
+  }
+  .section--one .container .intro--info {
+    width: 50%;
+    text-align: left;
+  }
+  .section--one .container .intro--info .intro--title {
+    font-size: 3.25rem;
+  }
+  .section--one .container .intro--info p {
+    width: 60%;
+  }
+}
 .section--two {
   margin-bottom: 80px;
 }
@@ -168,11 +211,14 @@ p {
   margin-bottom: 55px;
   text-align: center;
 }
-.section--two .container-left .container-fluid h2 {
+.section--two .container-left img {
+  display: none;
+}
+.section--two .container-left .container h2 {
   font-size: 2rem;
   font-weight: 700;
 }
-.section--two .container-left .container-fluid p {
+.section--two .container-left .container p {
   color: hsl(227, 12%, 61%);
   font-size: 0.9375rem;
   font-weight: 500;
@@ -204,91 +250,198 @@ p {
   line-height: 25px;
 }
 
+@media screen and (min-width: 992px) {
+  .section--two {
+    margin: 0 auto 156px auto;
+    max-width: 1110px;
+  }
+  .section--two .container-left,
+  .section--two .container-right {
+    width: 50% !important;
+  }
+  .section--two .container-left {
+    text-align: left;
+    position: relative;
+  }
+  .section--two .container-left img {
+    display: block;
+    width: 728px;
+    bottom: -552px;
+    left: -541px;
+    position: absolute;
+  }
+  .section--two .container-left .container h2 {
+    margin: 0 0 30px 0;
+  }
+  .section--two .container-left .container p {
+    width: 63%;
+  }
+  .section--two .container-right .feature--card .feature--card--header {
+    background-color: transparent;
+    font-weight: 700;
+  }
+  .section--two .container-right .feature--card:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+}
 .section--three {
   margin-bottom: 40px;
 }
-.section--three .container-fluid h2 {
+.section--three h2 {
   color: hsl(228, 39%, 23%);
   text-align: center;
   font-size: 2.0625rem;
   font-weight: 700;
-  margin: 0 0 50px 0;
+  margin: 0 0 80px 0;
 }
-.section--three .container-fluid #feedback {
+.section--three #feedback {
   margin-bottom: 50px;
 }
-.section--three .container-fluid #feedback .feedback--card--container {
+.section--three #feedback .feedback--card--container {
   position: relative;
+  padding: 0 30px;
 }
-.section--three .container-fluid #feedback .feedback--card--container .customer--img {
+.section--three #feedback .feedback--card--container .customer--img {
   position: absolute;
   top: -43px;
   width: 80px;
 }
-.section--three .container-fluid #feedback .feedback--card--container .feedback--card {
+.section--three #feedback .feedback--card--container .feedback--card {
   padding: 62px 24px 44px 24px;
   text-align: center;
   background-color: rgb(245, 245, 245);
   border-radius: 5px;
 }
-.section--three .container-fluid #feedback .feedback--card--container .feedback--card .customer--name {
+.section--three #feedback .feedback--card--container .feedback--card .customer--name {
   font-weight: 700;
 }
-.section--three .container-fluid #feedback .feedback--card--container .feedback--card .customer--feedback {
+.section--three #feedback .feedback--card--container .feedback--card .customer--feedback {
   margin-top: 20px;
   color: hsl(227, 12%, 61%);
   font-weight: 500;
 }
 
+@media screen and (min-width: 992px) {
+  .section--three {
+    padding: 0px !important;
+    width: 100%;
+    overflow: hidden;
+  }
+  .section--three .text-center .primary-btn {
+    margin: 0px 0 180px 0;
+  }
+  .section--three h2 {
+    margin: 0 0 84px 0;
+  }
+  .section--three #feedback .feedback--card--container {
+    padding: 0px;
+  }
+  .section--three #feedback .feedback--card--container:not(:last-child) {
+    margin-right: 25px;
+  }
+  .section--three #feedback .feedback--card--container .feedback--card {
+    width: 535px;
+  }
+}
 .section--four {
   background-color: hsl(12, 88%, 59%);
   padding: 44px;
   text-align: center;
 }
-.section--four h2 {
+.section--four .section--four--container h2 {
   font-size: 2.1875rem;
   color: hsl(0, 0%, 98%);
   margin-bottom: 22px;
 }
-.section--four button {
+.section--four .section--four--container button {
   font-weight: 700;
 }
 
+@media screen and (min-width: 992px) {
+  .section--four .section--four--container {
+    margin: 0 auto;
+    max-width: 1110px;
+  }
+  .section--four .section--four--container h2 {
+    width: 46%;
+    text-align: left;
+    margin: 0;
+  }
+}
 .section--five {
   padding: 50px 24px;
   background-color: hsl(228, 39%, 23%);
 }
-.section--five .section--form {
+.section--five .section--five--container .section--form {
   margin-bottom: 60px;
 }
-.section--five .section--form input {
+.section--five .section--five--container .section--form input {
   padding: 10px 30px;
   border-radius: 50px;
   font-size: 0.875rem;
   margin-right: 5px;
+  border: none;
 }
-.section--five .section--links {
+.section--five .section--five--container .section--form input:focus-visible {
+  outline: none;
+}
+.section--five .section--five--container .section--links {
   margin-bottom: 40px;
 }
-.section--five .section--links ul {
+.section--five .section--five--container .section--links ul {
   padding: 0px;
   margin: 0px;
   list-style: none;
 }
-.section--five .section--links ul li {
+.section--five .section--five--container .section--links ul li {
   text-align: left;
   color: hsl(227, 12%, 61%);
 }
-.section--five .section--links ul li:not(:last-child) {
+.section--five .section--five--container .section--links ul li:not(:last-child) {
   margin: 0 0 15px 0;
 }
-.section--five .section--social .social--links {
+.section--five .section--five--container .section--social {
   margin: 0 0 50px 0;
 }
-.section--five .section--social .social--links img {
+.section--five .section--five--container .section--social .social--links {
+  margin: 0 0 50px 0;
+}
+.section--five .section--five--container .section--social .social--links img {
   width: 40px;
 }
-.section--five .copywrite {
+.section--five .section--five--container .section--social h2 {
+  color: hsl(0, 0%, 98%);
+  font-size: 2.8125rem;
+}
+.section--five .section--five--container .copywrite {
   color: hsl(227, 12%, 61%);
   font-size: 11px;
+}
+
+@media screen and (min-width: 992px) {
+  .section--five {
+    position: relative;
+  }
+  .section--five .section--five--container {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+  .section--five .section--five--container .section--links .social-left {
+    margin: 0 103px 0 0;
+  }
+  .section--five .section--five--container .section--social {
+    position: relative;
+    margin: 0px;
+  }
+  .section--five .section--five--container .section--social .social--links {
+    position: absolute;
+    bottom: -150px;
+  }
+  .section--five .section--five--container .section--social .social--links img {
+    width: 24px;
+  }
+  .section--five .section--five--container .copywrite {
+    position: absolute;
+    bottom: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */

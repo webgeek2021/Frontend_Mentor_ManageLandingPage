@@ -1,43 +1,76 @@
 @use "color" as color;
 @use "mixins" as mixin;
+@use "variables" as var;
 
 .section--three {
     margin-bottom: 40px;
-    .container-fluid {
+
+    h2 {
+        color: color.$dark-blue;
+        text-align: center;
+        font-size: mixin.to-rem(33);
+        font-weight: 700;
+        margin: 0 0 80px 0;
+    }
+
+    #feedback {
+        margin-bottom: 50px;
+
+        .feedback--card--container {
+            position: relative;
+            padding: 0 30px;
+            
+            .customer--img {
+                position: absolute;
+                top: -43px;
+                width: 80px;
+            }
+
+            .feedback--card {
+                // background-color: color.$dark-grayish-blue;
+                padding: 62px 24px 44px 24px;
+                text-align: center;
+                background-color: color.$light-grey;
+                border-radius: 5px;
+                .customer--name {
+                    font-weight: 700;
+                }
+
+                .customer--feedback {
+                    margin-top: 20px;
+                    color: color.$dark-grayish-blue;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width : var.$DESKTOP_DEVICE) {
+    .section--three {
+        padding: 0px !important;
+        width: 100%;
+        overflow: hidden;
+
+        .text-center{
+            .primary-btn{
+                margin: 0px 0 180px 0;
+            }
+        }
         h2 {
-            color: color.$dark-blue;
-            text-align: center;
-            font-size: mixin.to-rem(33);
-            font-weight: 700;
-            margin: 0 0 50px 0;
+            margin: 0 0 84px 0;
         }
 
         #feedback {
-            margin-bottom: 50px;
             .feedback--card--container {
-                position: relative;
-
-                .customer--img {
-                    position: absolute;
-                    top: -43px;
-                    width: 80px;
+                padding: 0px;
+                &:not(:last-child) {
+                    margin-right: 25px;
                 }
 
                 .feedback--card {
-                    // background-color: color.$dark-grayish-blue;
-                    padding: 62px 24px 44px 24px;
-                    text-align: center;
-                    background-color: color.$light-grey;
-                    border-radius: 5px;
-                    
-                    .customer--name{
-                        font-weight: 700;
-                    }
-                    .customer--feedback{
-                        margin-top: 20px;
-                        color: color.$dark-grayish-blue;
-                        font-weight: 500;
-                    }
+                    width: 535px;
                 }
             }
         }

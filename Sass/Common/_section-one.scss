@@ -1,13 +1,10 @@
 @use "mixins" as mixin;
 @use "color" as color;
-
+@use "variables" as var;
 .section--one {
     margin-bottom: 100px;
     // background: url("../../images/bg-tablet-pattern.svg") no-repeat;
-
-    
-
-    .container-fluid {
+    .container {
         .intro--img {
             object-fit: cover;
             width: 100%;
@@ -25,6 +22,26 @@
             p{
                 color: color.$dark-grayish-blue;
                 margin-bottom: 26px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width : var.$DESKTOP_DEVICE) {
+    .section--one{
+        .container{
+            .intro--img{
+                width: 50%;
+            }
+            .intro--info{
+                width: 50%;
+                text-align: left;
+                .intro--title{
+                    font-size: mixin.to-rem(52);
+                }
+                p{
+                    width: 60%;
+                }
             }
         }
     }
