@@ -296,14 +296,40 @@ p {
 }
 .section--three #feedback {
   margin-bottom: 50px;
+  flex-direction: column !important;
+}
+.section--three #feedback .slick-dots {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.section--three #feedback .slick-dots .slick-active button {
+  background-color: hsl(12, 88%, 59%);
+}
+.section--three #feedback .slick-dots li button {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border: 1px solid hsl(12, 88%, 59%);
+  background-color: hsl(0, 0%, 98%);
+  outline: none;
+}
+.section--three #feedback .slick-dots li button:focus {
+  outline: none;
+  border: none;
+}
+.section--three #feedback .slick-dots li:not(:last-child) {
+  margin-right: 10px;
 }
 .section--three #feedback .feedback--card--container {
   position: relative;
   padding: 0 30px;
 }
 .section--three #feedback .feedback--card--container .customer--img {
-  position: absolute;
-  top: -43px;
+  position: relative;
+  top: 43px;
   width: 80px;
 }
 .section--three #feedback .feedback--card--container .feedback--card {
@@ -338,9 +364,6 @@ p {
   }
   .section--three #feedback .feedback--card--container:not(:last-child) {
     margin-right: 25px;
-  }
-  .section--three #feedback .feedback--card--container .feedback--card {
-    width: 535px;
   }
 }
 .section--four {

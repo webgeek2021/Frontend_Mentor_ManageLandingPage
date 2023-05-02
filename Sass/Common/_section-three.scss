@@ -15,14 +15,50 @@
 
     #feedback {
         margin-bottom: 50px;
+        flex-direction: column !important;
+
+        .slick-dots {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+
+            .slick-active {
+                button {
+                    background-color: color.$bright-red;
+                }
+            }
+
+            li {
+                button {
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid color.$bright-red;
+                    background-color: color.$very-light-gray;
+                    outline: none;
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+            }
+        }
 
         .feedback--card--container {
             position: relative;
             padding: 0 30px;
-            
+
             .customer--img {
-                position: absolute;
-                top: -43px;
+                position: relative;
+                top: 43px;
                 width: 80px;
             }
 
@@ -32,6 +68,7 @@
                 text-align: center;
                 background-color: color.$light-grey;
                 border-radius: 5px;
+
                 .customer--name {
                     font-weight: 700;
                 }
@@ -53,25 +90,29 @@
         width: 100%;
         overflow: hidden;
 
-        .text-center{
-            .primary-btn{
+        .text-center {
+            .primary-btn {
                 margin: 0px 0 180px 0;
             }
+
         }
+
         h2 {
             margin: 0 0 84px 0;
         }
 
         #feedback {
+            
             .feedback--card--container {
                 padding: 0px;
+
                 &:not(:last-child) {
                     margin-right: 25px;
                 }
 
-                .feedback--card {
-                    width: 535px;
-                }
+                // .feedback--card {
+                //     width: 535px;
+                // }
             }
         }
     }
