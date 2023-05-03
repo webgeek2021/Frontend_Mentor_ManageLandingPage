@@ -5,6 +5,7 @@
     margin-top: 20px;
     .header--nav{
         .container{
+            position: relative;
             .primary-btn{
                 display: none;
             }
@@ -15,11 +16,16 @@
                 opacity: 0.8;
             }
             .navbar-collapse{
+                // margin-top: 20px;
+                padding: 20px;
+                background-color: color.$very-light-gray;
+                border-radius: 5px;
+                position: absolute;
+                top: 40px;
+                width: calc(100% - 60px);
                 .navbar-nav{
-                    margin-top: 20px;
                     border-radius: 5px;
                     text-align: center;
-                    padding: 20px;
 
                     .nav-item{
                         font-weight: 700;
@@ -29,6 +35,42 @@
                         }
                     }
                 }
+            }
+
+            .navbar-toggler{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 40px;
+                height: 40px;
+                border: none;
+                padding: 0px;
+                &:focus{
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+                .line{
+                    width: 60%;
+                    height: 2px;
+                    background-color: color.$dark-blue;
+                    &:not(:last-child){
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+
+            .animate-humberger{
+              #line-1{
+                transform:  rotate(45deg) ;
+              }
+              #line-2{
+                display: none;
+              }
+              #line-3{
+                transform: translateY(-6px) rotate(-45deg);
+              }
             }
         }
     }
@@ -43,6 +85,10 @@
                     display: block;
                 }
                 .navbar-collapse{
+                    margin: 0px;
+                    padding: 0px;
+                    background-color: transparent;
+                    width: fit-content;
                     .navbar-nav{
                         margin: 10px auto 0px auto;
                         .nav-item{
@@ -52,6 +98,10 @@
                             }
                         }
                     }
+                }
+
+                .navbar-toggler{
+                    display: none;
                 }
             }
         }

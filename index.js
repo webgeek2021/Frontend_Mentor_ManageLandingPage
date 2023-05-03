@@ -13,7 +13,16 @@ window.addEventListener("load",()=>{
 })
 
 const navbarTogglerButton = document.getElementById("navbar-button")
+const humburgerMenu = document.getElementById("navbar-button")
 
+humburgerMenu.addEventListener("click",()=>{
+    if(humburgerMenu.classList.contains("animate-humberger")){
+        humburgerMenu.classList.remove("animate-humberger")
+    }
+    else{
+        humburgerMenu.classList.add("animate-humberger")
+    }
+})
 navbarTogglerButton.addEventListener("click",()=>{
     const body = document.body
     console.log(document.body.classList)
